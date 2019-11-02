@@ -9,36 +9,39 @@
     <script src="https://kit.fontawesome.com/1de2d38d55.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
-                <a href="index.html" style="color:#212529"><i class="fas fa-user-astronaut fa-8x col-4 col-sm-3 col-md-2 align-self-center mb-4"></i></a>
+                <a href="index.html" id="astro"><i class="fas fa-user-astronaut fa-8x col-4 col-sm-3 col-md-2 align-self-center mb-4"></i></a>
                 <div class="col">
                     <h1 class="display-4">Houston Café</h1>
                     <p class="lead">Your local coffee shop. Bringing the freshest coffee since 2019.</p>
                 </div>
             </div>
-      </div>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"><i class="fas fa-user-astronaut fa-lg"></i></a>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" id="astro" href="#"><i class="fas fa-user-astronaut fa-lg"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="aboutus.html">About Us</a>
-                <a class="nav-item nav-link" href="#">Menu</a>
-                <a class="nav-item nav-link disabled" href="#">Order Now!</a>
+                <a class="nav-item nav-link active" id="nav-text" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" id="nav-text" href="aboutus.html">About Us</a>
+                <a class="nav-item nav-link" id="nav-text" href="#">Menu</a>
+                <a class="nav-item nav-link disabled" id="nav-text" href="#">Order Now!</a>
               </div>
             </div>
     </nav>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col">
                 <div class="media">
@@ -62,7 +65,8 @@
                     <img class="d-flex ml-3 img-thumbnail" src="images/nutri.jpg" height="300px" width="400px" alt="Wellness">
                 </div>
         </div>
-    <div class="card">
+
+    <div class="card" style="border-color: #FFDAAA">
         <div class="card-body">
             <blockquote class="blockquote">
                 <p class="mb-0">Everyone should believe in something. I believe I will have another coffee.</p>

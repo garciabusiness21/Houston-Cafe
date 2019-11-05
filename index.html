@@ -7,10 +7,11 @@
     <title>Houston Café</title>
 
     <script src="https://kit.fontawesome.com/1de2d38d55.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
-
+    
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
 </head>
 
@@ -35,11 +36,42 @@
               <div class="navbar-nav">
                 <a class="nav-item nav-link active" id="nav-text" href="#">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" id="nav-text" href="aboutus.html">About Us</a>
-                <a class="nav-item nav-link" id="nav-text" href="#">Menu</a>
-                <a class="nav-item nav-link disabled" id="nav-text" href="#">Order Now!</a>
+                <a class="nav-item nav-link" id="nav-text" href="menu.html">Menu</a>
+                <a class="nav-item nav-link disabled" id="nav-text" href="#" data-toggle="modal" data-target="#orderModal">Order Now!</a>
               </div>
             </div>
     </nav>
+      
+      <!-- Order Modal -->
+      <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Order Now!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h5 class="mb-1">Where would you like to place your order?</h5>
+                <div class="row mt-2 text-center">
+                    <div class="col text-center">
+                        <a href="http://ubereats.com/"><i class="fas fa-car fa-4x text-center"></i></br>Uber eats</a>
+                    </div>
+                    <div class="col text-center">
+                        <a href="http://doordash.com/"><i class="fas fa-running fa-4x"></i></br>DoorDash</a>
+                    </div>
+                    <div class="col text-center">
+                        <a href="tel: +1-206-555-1234"><i class="fas fa-phone-square-alt fa-4x"></i></br>Give us a call!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <div class="container mt-5">
         <div class="row">
@@ -49,18 +81,72 @@
                     <div class="media-body align-self-center">    
                         <h3>Join Houston Coffee® Rewards</h3>
                         <p class="d-none d-sm-block">Get points towards free coffee. Each purchase qualifies for at least 100 points.</p>
-                        <a class="btn btn-outline-dark">JOIN NOW</a>
+                        <button type="button" class="btn" style="background-color: #AA5839; color:white;" data-toggle="modal" data-target="#exampleModal">JOIN NOW</button>
                     </div>
                 </div>
             </div>
         </div>
+
+      <!-- Rewards Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Houston Coffee® Rewards</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5>Please fill in your information</h5>
+              <form>
+                    <div class="form-group row">
+                            <label for="firstName" class="col-md-3 col-form-label">First Name:</label>
+                            <div class="col-md-8">    
+                            <input class="form-control" id="firstName" type="text" name="firstName"
+                                    placeholder="Steve"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lastName" class="col-md-3 col-form-label">Last Name:</label>
+                                <div class="col-md-8"><input class="form-control" id="lastName" type="text" name="lastName"
+                                    placeholder="Jobs"/>
+                                </div>
+                        </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Email address</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="houston@coffee.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">How many times do you vistit this location every month?</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1-5</option>
+                        <option>6-10</option>
+                        <option>10-20</option>
+                        <option>I come here daily.</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">How did you hear about us?</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
         <div class="row">
                 <div class="media">
                     <div class="media-body align-self-center">
                         <h3 class="mt-0 mb-1">You are what you eat</h3>
                         <p class="d-none d-sm-block">In Houston Café we care about your well-beign. This is why we recommend daily exercise and a balanced nutrition. </p>
-                        <a class="btn btn-outline-dark">Nutritional Information</a>
+                        <button class="btn">Nutritional Information</button>
                     </div>
                     <img class="d-flex ml-3 img-thumbnail" src="images/nutri.jpg" height="300px" width="400px" alt="Wellness">
                 </div>

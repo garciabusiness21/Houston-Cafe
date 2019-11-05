@@ -4,7 +4,7 @@
     background-color: #AA5839;
     color: white; }
 
-#astro{
+i{
     color:#123752;
 }
 
@@ -34,4 +34,24 @@ a{
 
 .card{
     background-color: #FFDAAA;
+}
+
+.linewrapper {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .middle {
+    border-bottom: 2px dotted #aaa;
+    flex-grow: 8;
+    margin: 0 2px;
+  }
+
+button  {
+    background-color: #AA5839;
+    color:white;
+}
+.modal-header {
+    background-color: #AA5839;
+    color:white;
 }
